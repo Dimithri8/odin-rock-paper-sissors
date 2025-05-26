@@ -16,7 +16,7 @@ function getHumanChoice() {
   let userInput = prompt("Type 'rock', 'paper', or 'scissors'");
   return userInput.toLowerCase();
 }
-// 2, 3, 5, 1, 4,
+
 function playRound(humanChoice, computerChoice) {
   if (humanChoice === "rock" && computerChoice === "paper") {
     console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
@@ -45,4 +45,17 @@ function playRound(humanChoice, computerChoice) {
   return roundResults;
 }
 
-console.log(playRound(getHumanChoice(), getComputerChoice()));
+function playGame() {
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  playRound(getHumanChoice(), getComputerChoice());
+  let finalResults = `Final Results: 
+  You scored: ${humanScore}. Your opponent scored: ${computerScore}. ${
+    humanScore > computerScore ? "You Won!" : "You Lost"
+  }`;
+  return finalResults;
+}
+
+console.log(playGame());
