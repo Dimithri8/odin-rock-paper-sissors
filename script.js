@@ -9,6 +9,11 @@ function getComputerChoice() {
   }
 }
 
+function getHumanChoice() {
+  let userInput = prompt("Type 'rock', 'paper', or 'sissors'");
+  return userInput;
+}
+console.log(getHumanChoice());
 console.log(getComputerChoice());
 
 // Generate a random number from 0 - 2. DONE
